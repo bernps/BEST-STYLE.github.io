@@ -1,0 +1,414 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Asegura que el padding y el borde no afecten el tamaño total */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(IMAGENES/closet.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;  /* Esto asegura que la altura sea siempre al menos la de la ventana */
+    display: flex;
+    flex-direction: column;  /* Para asegurar que el contenido no se desborde debajo del footer */
+}
+
+/* Sección para encabezados (h1, h2) con fondo negro */
+.encabezado {
+    background-color: black;  /* Fondo negro para el área */
+    color: white;             /* Texto blanco */
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0;           /* Evita que esta sección se comprima */
+}
+
+/* Estilo de los encabezados */
+.encabezado h1, .encabezado h2 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Menú */
+.menu > li {
+    float: right;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+}
+
+.menu li a:hover {
+    color: black;
+    background-color: whitesmoke;
+}
+
+.menu li ul {
+    display: none;
+    position: absolute;
+    min-height: 140px;
+}
+
+.menu li:hover > ul {
+    display: block;
+}
+
+.menu ul {
+    margin: 0;
+    background-color: none;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    flex-direction: row;
+    gap: 2rem; /* Ajustado para que el gap no sea demasiado grande */
+}
+
+#Btnmenu {
+    display: none;
+}
+
+/* Header */
+.header {
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Productos (Grid) */
+.productos {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr); /* Cambiado para 3 columnas en productos */
+    gap: 2rem; /* Ajusta el espacio entre los productos */
+    width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
+}
+
+/* Contenedor del producto */
+.producto {
+    /* Eliminado el fondo gris */
+    margin: 1rem; /* Ajuste en márgenes para evitar desbordamientos */
+    padding: 1rem; /* Ajuste en padding para un tamaño más manejable */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+    text-align: center;
+    width: 100%; /* Asegura que ocupe el 100% del espacio disponible */
+    background-color: transparent; /* Fondo transparente */
+}
+
+/*Ajuste de las imágenes */
+.productoblanco img {
+    width: 100%;
+    max-width: 250px; /* No permite que la imagen crezca más de 250px */
+    height: auto; /* Mantiene la relación de aspecto */
+    display: block; /* Asegura que no haya un espacio debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+}
+
+/* Descripción de productos */
+.nombrep,
+.preciop {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.preciop {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.nombrep {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    padding: 3.5rem;
+    padding-bottom: 2rem;
+    color: white;
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;  /* Evita que el footer se mueva hacia arriba */
+}
+
+/* Contenido adicional */
+.contenido {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.img {
+    margin: 1rem;
+    padding: 5rem;
+}
+
+.texto {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 4rem;
+}
+
+/* Botones de agregar y ver */
+.agregar-ver {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.agregar-ver button {
+    padding: 8px 15px; /* Ajuste de tamaño para botones más pequeños */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+.agregar {
+    background-color: darkslategray;
+    color: antiquewhite;
+}
+
+.ver {
+    background-color: darkslategray;
+    color: antiquewhite;
+}
+
+/* Barra de búsqueda */
+.busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#buscar {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+#btn-buscar {
+    background-color: darkslategray;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-buscar:hover {
+    background-color: darkslategray;
+}
+
+.busqueda input[type="text"]::placeholder {
+    font-size: 16px;
+    color: #666;
+}
+
+.busqueda input[type="text"]:focus {
+    outline: none;
+    border: 1px solid darkslategray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    /* Ajusta el layout de los productos */
+    .productos {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+    }
+
+    /* Asegura que las imágenes no se agranden demasiado */
+    .productoblanco img {
+        max-width: 100%; /* Las imágenes ocupan todo el contenedor, pero no exceden su tamaño */
+    }
+
+    /* Cambiar el tamaño de las fuentes en productos */
+    .nombrep {
+        font-size: 1.2rem;
+    }
+
+    .preciop {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustar los márgenes y padding para que no haya demasiado espacio */
+    .producto {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    /* Ajuste de la barra de búsqueda */
+    .busqueda {
+        flex-direction: column; /* Cambia la dirección a columna */
+        width: 100%;
+    }
+
+    #buscar {
+        width: 80%;
+    }
+
+    #btn-buscar {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    /* Ajustes para los botones */
+    .agregar-ver button {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
+
+/* Media Queries para dispositivos aún más pequeños (por ejemplo, móviles) */
+@media (max-width: 480px) {
+    .header {
+        font-size: 2rem;
+    }
+
+    .nombrep {
+        font-size: 1.2rem;
+    }
+
+    .preciop {
+        font-size: 0.8rem;
+    }
+
+    .producto {
+        padding: 0.8rem;
+        margin: 0.8rem;
+    }
+}
+
+.encabezado {
+    position: absolute;
+    background-color: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+}
+
+/* Estilo del rediseño */
+img {
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.contenedor > div {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: darkslategray;
+    border-radius: 20px;
+}
+
+.contenedor > div:hover {
+    background-color: #2D4263;
+}
+
+.información {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.información > p:first-child {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.información .precio {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.información button {
+    background-color: #263143;
+    justify-content: space-between;
+    width: 100px;
+    height: 35;
+    border-radius: 10px;
+    border: none;
+    font-size: 13px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.información button:hover {
+    background-color: #11294d;
+}
+
+.agregar-ver {
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Asegura que el HTML y el BODY ocupen toda la altura */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Establece un contenedor principal para asegurar que el contenido ocupe toda la altura menos el footer */
+.contenido {
+    flex: 1; /* Esto hace que el contenido principal ocupe el espacio disponible */
+}
+
+/* Para que el footer quede fijo en la parte inferior */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Esto hace que el footer se "pegue" al final */
+    width: 100%; /* Asegura que el footer cubra todo el ancho */
+}
+
+/* También puedes ajustar los márgenes y padding del footer si necesitas que se vea más pequeño o grande */
+.footer h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}

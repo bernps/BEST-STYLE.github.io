@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #141C29;
+    padding-top: 80px;
+}
+
+img{
+    width: 320 px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.contenedor>div{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: darkslategray;
+    border-radius: 20px;
+}
+
+.contenedor>div:hover{
+background-color: #2D4263;
+}
+
+.información{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.información>p:first-child{
+font-family:'Times New Roman', Times, serif;
+font-size: 25px;
+font-weight: 300;
+}
+
+.información .precio{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.información button{
+    background-color: #263143;
+    justify-content: space-between;
+    width: 100px;
+    height: 35;
+    border-radius: 10px;
+    border: none;
+    font-size: 13px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.información button:hover{
+    background-color: #11294d;
+}
+
+.agregar-ver{
+    justify-content: space-between;
+    gap: 20px;
+}

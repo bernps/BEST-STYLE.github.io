@@ -1,0 +1,116 @@
+/* Estilos generales */
+body {
+  font-family: Open Sans, Arial, sans-serif;
+  background-color: darkslategray;
+  color: #fff;
+}
+
+.cabecera {
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.lista-productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+
+.descripcion {
+  margin-left: 20px;
+}
+
+.precio-cantidad {
+  margin-left: 20px;
+}
+
+#vaciar-carrito,
+#aumentar-cantidad,
+#disminuir-cantidad,
+#eliminar-producto,
+#comprar {
+  background-color: darkslategrey;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#mensaje-compra-exitosa {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: darkslategrey;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos del Modal */
+.modal {
+  display: none; /* Inicialmente está oculto */
+  position: fixed;
+  z-index: 1; /* Asegúrate de que el modal esté por encima del contenido */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#cerrar-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#cerrar-modal:hover,
+#cerrar-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos de los inputs */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo del botón de continuar */
+#continuar-compra {
+  background-color: darkslategrey;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#continuar-compra:hover {
+  background-color: #444;
+}

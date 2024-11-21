@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Chamarras para Mujer - BEST STYLE</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="IMAGENES/logo.png">
+</head>
+
+<body>
+    <header>
+        <H1 class="header">BEST STYLE</H1>
+        <input type="checkbox" id="Btnmenu">
+        <nav class="menu">
+            <ul>
+                <li><a href="INDEX.html">Inicio</a></li>
+                <li><a href="hombre.html">Hombre</a>
+                    <ul>
+                        <li><a href="accesoriosh.html">Accesorios para la cabeza</a></li>
+                        <li><a href="playerash.html">Playeras y Camisas</a></li>
+                        <li><a href="chamarrash.html">Chamarras y Hoodies</a></li>
+                        <li><a href="pantalonesh.html">Pantalones y Pants</a></li>
+                        <li><a href="bermudash.html">Bermudas y Shorts</a></li>
+                        <li><a href="calzadoh.html">Calzado</a></li>
+                    </ul>
+                </li>
+                <li><a href="mujer.html">Mujer</a>
+                    <ul>
+                        <li><a href="accesoriosm.html">Accesorios para la cabeza</a></li>
+                        <li><a href="blusas.html">Blusas y Playeras</a></li>
+                        <li><a href="vestidos.html">Vestidos</a></li>
+                        <li><a href="#">Chamarras y Hoodies</a></li>
+                        <li><a href="faldas.html">Faldas y Shorts</a></li>
+                        <li><a href="pantalonesm.html">Pantalones y Pants</a></li>
+                        <li><a href="calzadom.html">Calzado</a></li>
+                    </ul>
+                </li>
+                <li><a href="kids.html">MI CUENTA</a>
+                    <ul>
+                        <li><a href="carrito.html">VER CARRITO</a></li>
+                        <li><a href="LOGIN.html">CERRAR SESION</a></li>
+                    </ul>
+                </li>
+                <div class="busqueda">
+                    <input type="text" id="buscar" placeholder="Buscar...">
+                    <button id="btn-buscar">Buscar</button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Aquí comienza la sección de productos -->
+    <div class="contenedor" id="contenedor">
+
+        <!-- Producto 1 -->
+        <div>
+            <img src="IMAGENES/chamarram1.jpg" alt="Chamarra Beisbolera Color Azul">
+            <div class="información">
+                <p>Chamarra Beisbolera Color Azul</p>
+                <p class="precio">$950</p>
+                <div>
+                    <button class="agregar" data-producto='{"nombre":"Chamarra Beisbolera Color Azul", "precio":950, "imagen": "IMAGENES/chamarram1.jpg"}'>AGREGAR AL CARRITO</button>
+                    <button class="ver"><a href="carrito.html">VER CARRITO</a></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div>
+            <img src="IMAGENES/chamarram2.jpg" alt="Chamarra de Piel Color Negra">
+            <div class="información">
+                <p>Chamarra de Piel Color Negra</p>
+                <p class="precio">$850</p>
+                <div>
+                    <button class="agregar" data-producto='{"nombre":"Chamarra de Piel Color Negra", "precio":850, "imagen": "IMAGENES/chamarram2.jpg"}'>AGREGAR AL CARRITO</button>
+                    <button class="ver"><a href="carrito.html">VER CARRITO</a></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div>
+            <img src="IMAGENES/sudaderam1.jpg" alt="Sudadera Color Verde">
+            <div class="información">
+                <p>Sudadera Color Verde</p>
+                <p class="precio">$600</p>
+                <div>
+                    <button class="agregar" data-producto='{"nombre":"Sudadera Color Verde", "precio":600, "imagen": "IMAGENES/sudaderam1.jpg"}'>AGREGAR AL CARRITO</button>
+                    <button class="ver"><a href="carrito.html">VER CARRITO</a></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div>
+            <img src="IMAGENES/sudaderam2.jpg" alt="Sudadera de Gatito">
+            <div class="información">
+                <p>Sudadera de Gatito</p>
+                <p class="precio">$750</p>
+                <div>
+                    <button class="agregar" data-producto='{"nombre":"Sudadera de Gatito", "precio":750, "imagen": "IMAGENES/sudaderam2.jpg"}'>AGREGAR AL CARRITO</button>
+                    <button class="ver"><a href="carrito.html">VER CARRITO</a></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="SCRIPTBUSQUEDA.js"></script> <!-- Buscador -->
+    <script src="scriptcarrito.js"></script> <!-- Funcionalidad del carrito -->
+
+</body>
+
+</html>
